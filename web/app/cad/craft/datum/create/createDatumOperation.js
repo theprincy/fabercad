@@ -8,6 +8,7 @@ import {roundInteractiveInput} from '../../wizard/roundUtils';
 import {DatumParamsRenderer} from '../DatumParamsRenderer';
 import {pointAsText} from 'renders';
 import {applyRotation} from "cad/craft/datum/rotate/rotateDatumOperation";
+import icon from "./DATUM.svg";
 
 function updateCSys(csys, params, findFace) {
   csys.copy(CSys.ORIGIN);

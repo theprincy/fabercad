@@ -15,5 +15,3 @@
 /.vs
 /web/docs/
 pnpm-lock.yaml
-*.zip
-*.tar.gz

@@ -13,7 +13,8 @@ export const BundleName = "@UIConfig";
 
 export function activate(ctx) {
   const {services, streams} = ctx;
-  streams.ui.controlBars.left.value = ['menu.file', 'menu.craft', 'menu.boolean', 'menu.primitives', 'menu.views', 'menu.viewModes', 'Donate', 'GitHub'];
+  //streams.ui.controlBars.left.value = ['menu.file', 'menu.craft', 'menu.boolean', 'menu.primitives', 'menu.views', 'menu.viewModes', 'Donate', 'GitHub'];
+  streams.ui.controlBars.left.value = ['menu.file', 'menu.craft', 'menu.boolean', 'menu.primitives', 'menu.views', 'menu.viewModes'];
   streams.ui.controlBars.right.value = [
     ['Info', {label: null}],
     ['RefreshSketches', {label: null}],
