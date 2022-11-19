@@ -1,14 +1,36 @@
-FaberCad
+JSketcher
 ===========
+![JSketcher Logo](./web/img/JSketcher-logo.svg)
+
+JSketcher is a **parametric** 2D and 3D CAD modeler written in pure javascript
 
 
-FaberCad is a **parametric** 2D and 3D CAD modeler written in pure javascript
+<a href='https://www.youtube.com/watch?v=Vk3TTp8hNxQ&list=PLeoCiKHizvH8PZEyFvThHzVlnTF5XaL-R'> 
+  <img src='../../wiki/img/sample2d.png' width='400px'>
+  <img src='../../wiki/img/sample3d.png' width='400px'> 
+</a>
 
+[YouTube Tutorial Video](https://www.youtube.com/watch?v=Vk3TTp8hNxQ&list=PLeoCiKHizvH8PZEyFvThHzVlnTF5XaL-R)
+
+[Live Sample Demo](http://web-cad.org/?com.github.jsketcher-sample-models.MODELS.Flag-Holder)
+
+[2D Sketcher](http://web-cad.org/sketcher.html#__sample2D__)
+
+[Help Docs](./web/docs/index.md)
+
+[Workbench Dev Guide](./dev-guide/index.md)
+
+[Comercial Licencing](https://www.autodrop3d.com/parametric-cad-beta.html) 
+
+
+Please consider supporting this project by becoming a backer
+==============
+<a href="https://opencollective.com/jsketcher-ad3d/"><image src="https://opencollective.com/jsketcher-ad3d/tiers/backer.svg?avatarHeight=300&width=3000"></image><image src="https://opencollective.com/jsketcher-ad3d/tiers/badge.svg"></image></a>
 
 Current Status
 ==============
 
-FaberCad is a parametric 3d modeler employing a 2D constraint solver for sketches and the feature/history metaphor to build models. The 2D constraint solver is completely written in javascript/typescript and is implemented in both the 3D CAD and the 2D sketcher. Originally developed by xibyte to make models for 3d printing. Today FaberCad provides a rich set of tools for visualizing, selecting/interacting with 3D geometry, tracking and storing model history all built on the foundation of the 2D sketcher engine and employing OpenCascade for solid modeling operations. 
+JSketcher is a parametric 3d modeler employing a 2D constraint solver for sketches and the feature/history metaphor to build models. The 2D constraint solver is completely written in javascript/typescript and is implemented in both the 3D CAD and the 2D sketcher. Originally developed by xibyte to make models for 3d printing. Today JSketcher provides a rich set of tools for visualizing, selecting/interacting with 3D geometry, tracking and storing model history all built on the foundation of the 2D sketcher engine and employing OpenCascade for solid modeling operations. 
 
 Major Components and features
 ==============
@@ -55,13 +77,28 @@ Get Started With the Code
 =========================
 
 Install node.js
+```
+npm install
+npm start
+```
+Goto http://localhost:3000 using your browser. Tested on google chrome but known to work in firefox and edge. 
 
-* $ cd \<jsketcher folder\>
-* $ npm install
-* $ npm start
 
+Generate Electron Build for desktop
+=========================
+```
+npm run electron:package:linux
+npm run electron:package:win
+npm run electron:package:mac
+```
 
+The resulting binary will be placed in the dist folder that is generated. 
 
+Note:
+Build targeting windows from linux requires wine to be installed.
+
+Linux build produces app image and deb for installation. 
+To use the app image you must do a 'chmod +x jsketcher-*.*.*.AppImage'
 
 Contributing Please see  [.github/CONTRIBUTING.md ](.github/CONTRIBUTING.md )
 =========================

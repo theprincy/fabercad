@@ -99,8 +99,8 @@ function previewer(ctx, initialParams, updateParams) {
 
 export default {
   id: 'DATUM_CREATE',
-  label: 'Create Datum',
-  icon: 'img/cad/datum',
+  label: 'Datum',
+  icon,
   info: 'originates a new datum from origin or off of a selected face',
   paramsInfoComponent: DatumParamsRenderer,
   paramsInfo: pointAsText,

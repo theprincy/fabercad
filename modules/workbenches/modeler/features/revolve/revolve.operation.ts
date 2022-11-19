@@ -7,6 +7,7 @@ import Axis from "math/axis";
 import {OperationDescriptor} from "cad/craft/operationBundle";
 import {FaceRef} from "cad/craft/e0/OCCUtils";
 import {FromMObjectProductionAnalyzer, FromSketchProductionAnalyzer} from "cad/craft/production/productionAnalyzer";
+import icon from "./REVOLVE.svg";
 
 interface RevolveParams {
   angle: number;
@@ -18,7 +19,7 @@ interface RevolveParams {
 export const RevolveOperation: OperationDescriptor<RevolveParams> = {
   id: 'REVOLVE',
   label: 'Revolve',
-  icon: 'img/cad/revolve',
+  icon,
   info: 'Revolves 2D sketch',
   path:__dirname,
   paramsInfo: ({angle}) => `(${r(angle)})`,
@@ -89,7 +90,8 @@ export const RevolveOperation: OperationDescriptor<RevolveParams> = {
       name: 'boolean',
       label: 'boolean',
       optional: true,
-      defaultValue: 'NONE'
+      defaultValue: 'NONE',
+      simplify: true,
     }
 
   ],

@@ -169,7 +169,7 @@ export default [
       label: 'GitHub',
       info: 'open GitHub project page',
     },
-    invoke: (context) => window.open('https://github.com/theprincy/fabercad', '_blank')
+    invoke: (context) => window.open('https://github.com/xibyte/jsketcher', '_blank')
   },
 
   {
