@@ -36,6 +36,7 @@ module.exports = {
       maxAssetSize: 100000,
       maxEntrypointSize: 400000,
     },
+
       http2: true,
       server: {
       type: 'https',
