@@ -1,4 +1,4 @@
-First off. You are awesome. Thanks for wanting to help contribute to the JSketcher project. 
+First off. You are awesome. Thanks for wanting to help contribute to the FaberCad project. 
 
 To make things easier to manage we have some guidelines that will help to keep the codebase clean and tidy. 
 

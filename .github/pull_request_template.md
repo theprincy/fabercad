@@ -11,6 +11,6 @@ Contributor name: XXXXX
 =========================
 
 
-Confirm compliance with JSketcher project license. 
+Confirm compliance with FaberCad project license. 
 =========================
 - [x] Pull request is made compliance with JSKetcher license  
