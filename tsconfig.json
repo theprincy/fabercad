@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "lib": ["es2018", "dom"],
+    "sourceMap": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2015",
+    "baseUrl": ".",
+    "downlevelIteration": true,
+    "module": "commonJS",
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "paths": {
+      "*": [
+        "modules/*",
+        "web/app/*",
+        "node_modules/*"
+      ]
+    }
+  },
+  "include": [
+    "modules/**/*",
+    "web/app/**/*",
+    "externals.d.ts"
+  ]
+}
