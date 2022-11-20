@@ -36,16 +36,16 @@ module.exports = {
       maxAssetSize: 100000,
       maxEntrypointSize: 400000,
     },
-      http2: true,
-      server: {
+    http2: true,
+    server: {
       type: 'https',
-       options: {
-          key: '/www/wwwroot/fabercad.italfaber.it/private.key',
-          cert: '/www/wwwroot/fabercad.italfaber.it/certificate.pem',
+      options: {
+        key: '/www/wwwroot/fabercad.italfaber.it/private.key',
+        cert: '/www/wwwroot/fabercad.italfaber.it/certificate.pem',
 
-        },
       },
-      setupExitSignals: true,
+    },
+    setupExitSignals: true,
 
     hot: false,
     liveReload: false,
