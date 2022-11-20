@@ -15,6 +15,7 @@ export default class Bus {
       listenerList = [];
       this.listeners[token] = listenerList;
     }
+
     listenerList.push(callback);
     return callback;
   }

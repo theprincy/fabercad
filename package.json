@@ -1,5 +1,5 @@
 {
-  "name": "jsketcher",
+  "name": "fabercad",
   "version": "0.1.0",
   "main": "electron.js",
   "private": true,
