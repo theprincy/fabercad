@@ -31,8 +31,8 @@ module.exports = {
     extensions: ['.js', '.jsx', ".ts", ".tsx"],
     modules: [MODULES, "node_modules", WEB_APP],
   },
-  module.exports = {
-    //...
+  module.exports: {
+
     performance: {
       assetFilter: function (assetFilename) {
         return assetFilename.endsWith('.js');
