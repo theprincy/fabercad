@@ -32,6 +32,10 @@ module.exports = {
     modules: [MODULES, "node_modules", WEB_APP],
   },
   devServer: {
+    performance: {
+      maxAssetSize: 100000,
+      maxEntrypointSize: 400000,
+    },
       http2: true,
       server: {
       type: 'https',
