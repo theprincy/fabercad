@@ -31,11 +31,16 @@ module.exports = {
     extensions: ['.js', '.jsx', ".ts", ".tsx"],
     modules: [MODULES, "node_modules", WEB_APP],
   },
-  devServer: {
+  module.exports = {
+    //...
     performance: {
-      maxAssetSize: 100000,
-      maxEntrypointSize: 400000,
+      assetFilter: function (assetFilename) {
+        return assetFilename.endsWith('.js');
+      },
     },
+  };
+  devServer: {
+
     http2: true,
     server: {
       type: 'https',
