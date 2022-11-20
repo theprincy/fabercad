@@ -14,14 +14,12 @@ export class SketchGeom {
   loops: SketchPrimitive[];
   constructionSegments: SketchPrimitive[];
   _contours: Contour[];
-  points: [];
 
   constructor() {
     this.connections = [];
     this.loops = [];
     this.constructionSegments = [];
     this._contours = null;
-    this.points = [];
   }
 
   fetchContours() {
@@ -109,22 +107,6 @@ export function ReadSketch(sketch, sketchId, readConstructionSegments) {
       const ry = readSketchFloat(data.ry);
       const rot = readSketchFloat(data.rot);
       out.loops.push(new sm.Ellipse(getID(obj), c, rx, ry, rot));
-    }else if (obj.type === 'Point') {
-      if (data.ep1) {
-        continue;
-      }
-
-      ReadSketchPoint(data);
-      const x = readSketchFloat(data.x);
-      const y = readSketchFloat(data.y);
-      const z = 0;
-      
-      //out.points.push(ReadSketchPoint(data));
-      const point = 
-      out.points.push({
-        id:getID(obj),
-        point:{x,y,z}
-      })
     }
   }
   return out;

@@ -21,13 +21,12 @@ export const SheetMetalWorkspace: WorkbenchConfig = {
   actions: [],
   ui: {
     toolbar: [
-      ['DATUM_CREATE', 'PLANE', 'EditFace',],
-      ["SM_TAB","SM_FLANGE", "EXTRUDE"],
-      ["BOOLEAN",], 
-      ["FILLET_TOOL", ],
-      ["MIRROR_BODY", "PATTERN_LINEAR", "PATTERN_RADIAL", "MOVE_BODY"] , 
-      ["HOLE_TOOL",],
-      
+      'DATUM_CREATE', 'PLANE', 'EditFace', '-',
+      "EXTRUDE", "-", 
+      "BOOLEAN", "-", 
+      "FILLET_TOOL", "MIRROR_BODY",  "-",
+      "HOLE_TOOL", "-",
+      "SM_TAB","SM_FLANGE"
     ]
   },
   icon: GiFoldedPaper

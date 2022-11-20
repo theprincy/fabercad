@@ -3,9 +3,6 @@ import {ApplicationContext} from "cad/context";
 import {EntityKind} from "cad/model/entities";
 import {BooleanDefinition} from "cad/craft/schema/common/BooleanDefinition";
 import {OperationDescriptor} from "cad/craft/operationBundle";
-import iconUnion from "./UNION.svg";
-import iconIntersection from "./INTERSECTION.svg";
-import iconSubtract from "./SUBTRACT.svg";
 
 interface BooleanParams {
   tools: [];
@@ -16,7 +13,7 @@ interface BooleanParams {
 export const BooleanOperation: OperationDescriptor<BooleanParams> = {
   id: 'BOOLEAN',
   label: 'Boolean',
-  icon: iconUnion,
+  icon: 'img/cad/intersection',
   info: 'Booleans 2D sketch',
   path:__dirname,
   paramsInfo: ({tools, boolean}) => `(${r(tools)} ${r(boolean)})`,
@@ -69,36 +66,33 @@ export const BooleanOperation: OperationDescriptor<BooleanParams> = {
     {
       id: 'UNION',
       label: 'Union',
-      icon: iconUnion,
+      icon: 'img/cad/union',
       info: 'makes a cut based on 2D sketch',
       maskingParams: {
         boolean: {
-          kind: 'UNION',
-          simplify: true,
+          kind: 'UNION'
         }
       }
     },
     {
       id: 'SUBTRACT',
       label: 'Subtract',
-      icon: iconSubtract,
+      icon: 'img/cad/subtract',
       info: 'makes a cut based on 2D sketch',
       maskingParams: {
         boolean: {
-          kind: 'SUBTRACT',
-          simplify: true,
+          kind: 'SUBTRACT'
         }
       }
     },
     {
       id: 'INTERSECT',
       label: 'Intersect',
-      icon: iconIntersection,
+      icon: 'img/cad/intersection',
       info: 'makes a cut based on 2D sketch',
       maskingParams: {
         boolean: {
-          kind: 'INTERSECT',
-          simplify: true,
+          kind: 'INTERSECT'
         }
       }
     }

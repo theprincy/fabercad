@@ -109,7 +109,6 @@ export function createOCCUtils(ctx: ApplicationContext): OCCUtils {
       oci.bcheckinverted(1);
       oci.bfillds();
       oci.bapibop("BooleanResult", booleanKindToOCCBopType(kind));
-
       // let resultShell = occ.io.getShell("BooleanResult");
       // if (resultShell.edges.length < 0) {
 
@@ -123,7 +122,7 @@ export function createOCCUtils(ctx: ApplicationContext): OCCUtils {
 
       // }
 
-      oci.fixshape("BooleanResultResult", "BooleanResult");
+
 
       targets.forEach(t => consumed.push(t));
       tools.forEach(t => consumed.push(t));
@@ -133,7 +132,7 @@ export function createOCCUtils(ctx: ApplicationContext): OCCUtils {
 
       return {
         consumed,
-        created: [occ.io.getShell("BooleanResultResult", booleanProdAnalyzer)]
+        created: [occ.io.getShell("BooleanResult", booleanProdAnalyzer)]
       }
     }
   }

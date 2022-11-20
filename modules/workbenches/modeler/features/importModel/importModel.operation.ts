@@ -6,8 +6,6 @@ import {parseString} from 'browser-xml2js';
 import {importStepFile} from "cad/craft/e0/interact";
 import {clone} from "gems/objects";
 import JSZip from "jszip/dist/jszip.min";
-import icon from "./IMPORT.svg";
-
 
 interface ImportModelParams {
   file: LocalFileAdapter;
@@ -26,7 +24,7 @@ const parseStringAsync = (xml) => new Promise((resolve, reject) => {
 export const ImportModelOperation: OperationDescriptor<ImportModelParams> = {
   id: 'IMPORT_MODEL',
   label: 'Import',
-  icon,
+  icon: 'img/cad/import',
   info: 'Imports BREP, STEP, IGES or FCStd file',
   path:__dirname,
   paramsInfo: () => `()`,

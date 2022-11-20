@@ -1,4 +1,4 @@
-import {GiCube} from 'react-icons/all';
+import {GiCube} from "react-icons/all";
 
 export default [
   {
@@ -11,17 +11,14 @@ export default [
     id: 'craft',
     cssIcons: ['magic'],
     info: 'set of available craft operations on a solid',
-    actions: [ 'DATUM_CREATE', 'EditFace', 'EXTRUDE', 'CUT', 'REVOLVE', 'LOFT', 'SWEEP', '-', 
-    'SHELL_TOOL', 'FILLET_TOOL', 'SCALE_BODY', 'DEFEATURE_REMOVE_FACE', '-',
-    'MIRROR_BODY', 'PATTERN_LINEAR', 'PATTERN_RADIAL',
-  ]
+    actions: ['EXTRUDE', 'CUT', 'REVOLVE', 'LOFT', 'SHELL', 'FILLET', 'DATUM_CREATE', ]
   },
   {
     id: 'primitives',
     label: 'add',
     cssIcons: ['cube'],
     info: 'set of available solid creation operations',
-    actions: ['PLANE', 'CYLINDER', 'BOX', 'CONE', 'SPHERE', 'TORUS',]
+    actions: ['PLANE', "primitive_cylinder", "primitive_box", "primitive_cone", "primitive_sphere", "primitive_torus"]
   },
   {
     id: 'views',
@@ -43,7 +40,7 @@ export default [
     label: 'bool',
     cssIcons: ['pie-chart'],
     info: 'set of available boolean operations',
-    actions: ['INTERSECT', 'SUBTRACT', 'UNION']
+    actions: ['INTERSECTION', 'SUBTRACT', 'UNION']
   },
   {
     id: 'main',
@@ -60,6 +57,8 @@ export default [
     cssIcons: ['magic'],
     info: 'operations on datum',
     actions: ['PLANE', '-', 'BOX', 'SPHERE', 'CYLINDER', 'TORUS', 'CONE']
+    // actions: ['DATUM_MOVE', 'DATUM_ROTATE', 'DATUM_REBASE', '-', 'PLANE_FROM_DATUM', 'BOX', 'SPHERE', 'TORUS', 
+    //   'CONE', 'CYLINDER']
   },
   {
     id: 'contextual',

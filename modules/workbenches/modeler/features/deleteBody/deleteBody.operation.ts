@@ -3,7 +3,6 @@ import {ApplicationContext} from "cad/context";
 import {EntityKind} from "cad/model/entities";
 import {OperationDescriptor} from "cad/craft/operationBundle";
 import {MShell} from "cad/model/mshell";
-import icon from "./DELETE-BODY.svg"
 
 interface DeleteBodyParams {
   tools: MShell[];
@@ -12,7 +11,7 @@ interface DeleteBodyParams {
 export const DeleteBodyOperation: OperationDescriptor<DeleteBodyParams> = {
   id: 'DELETE_BODY',
   label: 'DeleteBody',
-  icon,
+  icon: 'img/cad/deleteBody',
   info: 'Delete Bodies',
   path:__dirname,
   paramsInfo: ({ tools }) => `(${r(tools)})`,

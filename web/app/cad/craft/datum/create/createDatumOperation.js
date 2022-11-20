@@ -8,7 +8,6 @@ import {roundInteractiveInput} from '../../wizard/roundUtils';
 import {DatumParamsRenderer} from '../DatumParamsRenderer';
 import {pointAsText} from 'renders';
 import {applyRotation} from "cad/craft/datum/rotate/rotateDatumOperation";
-import icon from "./DATUM.svg";
 
 function updateCSys(csys, params, findFace) {
   csys.copy(CSys.ORIGIN);
@@ -100,8 +99,8 @@ function previewer(ctx, initialParams, updateParams) {
 
 export default {
   id: 'DATUM_CREATE',
-  label: 'Datum',
-  icon,
+  label: 'Create Datum',
+  icon: 'img/cad/datum',
   info: 'originates a new datum from origin or off of a selected face',
   paramsInfoComponent: DatumParamsRenderer,
   paramsInfo: pointAsText,

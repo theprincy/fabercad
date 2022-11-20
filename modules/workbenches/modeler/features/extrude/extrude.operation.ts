@@ -8,8 +8,7 @@ import {OperationDescriptor} from "cad/craft/operationBundle";
 import {MObject} from "cad/model/mobject";
 import {FaceRef} from "cad/craft/e0/OCCUtils";
 import {FromSketchProductionAnalyzer, PushPullFaceProductionAnalyzer} from "cad/craft/production/productionAnalyzer";
-import icon from "./EXTRUDE.svg";
-import iconCut from "./CUT.svg";
+
 
 interface ExtrudeParams {
   length: number;
@@ -30,7 +29,13 @@ export const ExtrudeOperation: OperationDescriptor<ExtrudeParams> = {
     }
     return null;
   },
-  icon,
+  dynamicIcon: params => {
+    switch (params.boolean?.kind) {
+      case 'SUBTRACT': return 'img/cad/cut';
+    }
+    return null;
+  },
+  icon: 'img/cad/extrude',
   info: 'extrudes 2D sketch',
   path:__dirname,
   paramsInfo: ({length}) => `(${r(length)})`,
@@ -133,15 +138,14 @@ export const ExtrudeOperation: OperationDescriptor<ExtrudeParams> = {
     {
       id: 'CUT',
       label: 'Cut',
-      icon: iconCut,
+      icon: 'img/cad/cut',
       info: 'makes a cut based on 2D sketch',
       maskingParams: {
         direction: {
           flip: true
         },
         boolean: {
-          kind: 'SUBTRACT',
-          simplify: true,
+          kind: 'SUBTRACT'
         }
       }
     }

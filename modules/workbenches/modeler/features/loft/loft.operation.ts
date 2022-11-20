@@ -6,7 +6,7 @@ import { OperationDescriptor } from "cad/craft/operationBundle";
 import { MSketchLoop } from "cad/model/mloop";
 import { FromSketchProductionAnalyzer } from "cad/craft/production/productionAnalyzer";
 import {FaceRef} from "cad/craft/e0/OCCUtils";
-import icon from "./LOFT.svg";
+
 
 interface LoftParams {
   loops: MSketchLoop[];
@@ -17,7 +17,7 @@ interface LoftParams {
 export const LoftOperation: OperationDescriptor<LoftParams> = {
   id: 'LOFT',
   label: 'Loft',
-  icon,
+  icon: 'img/cad/loft',
   info: 'Lofts 2D sketch',
   path:__dirname,
   paramsInfo: () => `(?)`,
@@ -93,7 +93,6 @@ export const LoftOperation: OperationDescriptor<LoftParams> = {
       name: 'boolean',
       label: 'boolean',
       optional: true,
-      simplify: true,
     }
 
   ],

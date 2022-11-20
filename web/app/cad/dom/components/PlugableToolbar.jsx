@@ -24,7 +24,10 @@ export function ToolbarActionButtons({actions, showTitles, size}) {
     } else if (actionRef === '|') {
       return <ToolbarBraker key={'ToolbarBraker' + i} />;
     } else if (Array.isArray(actionRef)) {
-      return <ToolbarGroup><ToolbarActionButtons actions={actionRef} showTitles={showTitles} size={size} /></ToolbarGroup>;
+      return <div key={'ToolbarGroup' + i}>
+        <ToolbarGroup><ToolbarActionButtons actions={actionRef.slice(0, actionRef.length / 2)} showTitles={showTitles} size={size} /></ToolbarGroup>
+        <ToolbarGroup><ToolbarActionButtons actions={actionRef.slice(actionRef.length / 2, actionRef.length)} showTitles={showTitles} size={size} /></ToolbarGroup>
+      </div>;
     }
     const [id, overrides] = toIdAndOverrides(actionRef);
     return <ConnectedActionButton actionId={id} key={id} size={size} {...overrides} noLabel={!showTitles}/>
