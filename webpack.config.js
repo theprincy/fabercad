@@ -35,7 +35,7 @@ module.exports = {
     devServer: {
         http2: true,
 
-        },
+
         setupExitSignals: true,
 
         hot: false,
