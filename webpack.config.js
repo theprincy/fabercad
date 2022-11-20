@@ -32,7 +32,6 @@ module.exports = {
     modules: [MODULES, "node_modules", WEB_APP],
   },
   devServer: {
-
       http2: true,
       server: {
       type: 'https',
