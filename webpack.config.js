@@ -32,10 +32,10 @@ module.exports = {
     modules: [MODULES, "node_modules", WEB_APP],
   },
   module.exports: {
-
     performance: {
-      assetFilter: function (assetFilename) {
-        return assetFilename.endsWith('.js');
+      maxAssetSize: 100000,
+          maxEntrypointSize: 400000,
+
       },
     },
   };
